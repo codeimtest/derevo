@@ -1,3 +1,8 @@
+//preloader
+$(window).on('load', function() { // makes sure the whole site is loaded 
+    $('#status-img').fadeOut(); // will first fade out the loading animation 
+    $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+})
 //mobile menu
 $('.menu-btn').click(function(){
     $('header ul').toggleClass('active')
