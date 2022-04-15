@@ -20,9 +20,11 @@ const swipermodules = new Swiper('.modules-carousel', {
     slidesPerView: 1,
     centeredSlides: false,
     spaceBetween: 16,
+    
     breakpoints: {
         1280: {
           slidesPerView: 'auto',
+          watchOverflow: true,
           spaceBetween: 40,
           centeredSlides: false,
         },
@@ -71,16 +73,16 @@ if(document.querySelector(".starIcon1") != undefined){
   
 
   // remove the clickedStar class on every stars
-  function removeClickedStar(){
+  var removeClickedStar = function (){
       for(let i = 0; i < stars.length; i++){
           stars[i].classList.remove("clickedStar");
       }
   }
 
   // add the clickedStar function when clicked and check his radio button
-  function addClickedStar(numStar){
+  var addClickedStar = function (numStar){
       // clickedStar function when clicked
-      for(let i = 0; i < numStar; i++){
+      for(let i = 0; i < numStar; i++){
           stars[i].classList.add("clickedStar");
       }
       // check his radio button
@@ -90,7 +92,7 @@ if(document.querySelector(".starIcon1") != undefined){
   }
 
   // translate hover effect
-  function translateHover(numStar, translateY){
+  var translateHover = function (numStar, translateY){
       for(let i = 0; i < numStar; i++){
           stars[i].style.transform = translateY;
       }
@@ -118,4 +120,3 @@ if(document.querySelector(".starIcon1") != undefined){
   // create the events listeners
   createRatingEventListeners();
 }
-

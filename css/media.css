@@ -2,7 +2,9 @@
 
 /* xl <= Extra extra large (xxl) */
 @media (max-width : 1400px) {
-
+	.users-bg,.analysis-bg,.gallery-bg{
+		background-size: 45%;
+	}
 }
 
 /* lg <= Extra large (xl) */
@@ -14,6 +16,16 @@
 
 /* md <= Large (lg) */
 @media (max-width : 992px) {
+	section.team:after{
+		right: auto;
+		left: 0;
+		width: 279px;
+    height: 240px;
+		bottom: -10%;
+	}
+	.users-bg{
+		background-size: 100%;
+	}
 	.team-carousel .swiper-slide .team-member-info{
 		margin-left: 0;
 		margin-right: 0;
@@ -76,10 +88,89 @@
 	.team-carousel .swiper-wrapper{
 		margin-bottom: 36px;
 	}
+	.button-middle{
+		width: 100%;
+		display: block;
+	}
+	footer:before {
+		content: '';
+		position: absolute;
+		background: #0F62FE;
+		filter: blur(115px);
+		-webkit-transform: translate3d(0,0,0);
+		transform: rotate(-75deg);
+		width: 358px;
+		height: 52px;
+		z-index: 1;
+		right: 0;
+		top: -21%;
+	}
+	.contact-form:after{
+		content: none;
+	}
+	.contact-form{
+		z-index: 99;
+	}
+	footer{
+		position: relative;
+	}
+	.contact-form:before{
+		content: none;
+	}
+	.contact .section-text-widget{
+		position: relative;
+	}
+	.contact .section-text-widget::after{
+	    content: '';
+    position: absolute;
+    background: #33B1FF;
+    filter: blur(78px);
+    -webkit-transform: translate3d(0,0,0);
+    width: 471px;
+    height: 396px;
+    z-index: -1;
+    left: 0;
+    top: 0;
+	}
+	.contact .section-text-widget::after {
+		content: '';
+		position: absolute;
+		background: #33B1FF;
+		filter: blur(171px);
+		-webkit-transform: translate3d(0,0,0);
+		width: 194px;
+		height: 383px;
+		z-index: -1;
+		bottom: -230%;
+		top: 0;
+	}
+	section.users.lg-section:before{
+		width: 128px;
+		height: 264px;
+	}
+	section.about:after{
+		bottom: -38%;
+		width: 273px;
+    height: 249px;
+	right: 5%;
+	}
+	.chat::after{
+		width: 400px;
+		height: 257px;
+		right: 0;
+		bottom: 0;
+		left: auto;
+	}
+	.analysis::after{
+		right: auto;
+	}
 }
 
 /* sm <= Medium (md) */
 @media (max-width : 768px) {
+	footer:before{
+		height: 64px;
+	}
 	.team-carousel{
 		max-height: 620px;
 	}
@@ -191,10 +282,7 @@
 	.news-item{
 		margin-bottom: 24px;
 	}
-	.button-middle{
-		width: 100%;
-		display: block;
-	}
+
 	.toggle-accordion{
 		padding: 16px;
 	}

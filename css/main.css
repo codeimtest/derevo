@@ -329,6 +329,22 @@ section.first-screen{
 	font-weight: 700;
 }
 /*about section */
+section.about:after{
+	-webkit-transform: translate3d(0,0,0);
+    content: '';
+    background: #9EF0F0;
+    filter: blur(235px);
+    transform: rotate(75deg);
+    width: 493px;
+    height: 249px;
+    position: absolute;
+    right: 0;
+    bottom: -114%;
+    z-index: 0;
+}
+main#main-content{
+	overflow: hidden;
+}
 .about-steps{
 	height: 100%;
 	display: flex;
@@ -353,30 +369,8 @@ section.first-screen{
 	color: var(--sec-text);
 }
 /*modules section*/
-.modules::after{
-	-webkit-transform: translate3d(0,0,0);
-	content: '';
-	background: #9EF0F0;
-	filter: blur(235px);
-	transform: rotate(75deg);
-	width: 493px;
-	height: 550px;
-	position: absolute;
-	right: 0;
-	top: 0;
-	z-index: -1;
-}
-.modules::before{
-	content: '';
-	background: #33B1FF;
-	filter: blur(235px);
-	-webkit-transform: translate3d(0,0,0);
-	width: 314px;
-	height: 264px;
-	position: absolute;
-	bottom: 0;
-	left: 24%;
-	z-index: -1;
+.modules{
+	overflow: hidden;
 }
 
 .modules-carousel .swiper-slide{
@@ -432,6 +426,18 @@ section.first-screen{
 	font-size: 22px;
 }
 /*users*/
+section.users.lg-section:before {
+    content: '';
+    background: #33B1FF;
+    filter: blur(235px);
+    -webkit-transform: translate3d(0,0,0);
+    width: 314px;
+    height: 264px;
+    position: absolute;
+    left: 14%;
+    top: -25%;
+    z-index: -1;
+}
 .users-bg{
 	background: url(../images/users.png);
     width: 100%;
@@ -461,8 +467,8 @@ section.first-screen{
 	filter: blur(235px);
 	-webkit-transform: translate3d(0,0,0);
 	transform: rotate(-75deg);
-	height: 358px;
-	width: 358px;
+    height: 206px;
+    width: 293px;
 	position: absolute;
 	right: 0;
 	bottom: 0;
@@ -506,6 +512,17 @@ section.first-screen{
 	z-index: -1;
 }
 /*team section*/
+section.team:after {
+    background: #33B1FF;
+    filter: blur(360px);
+	-webkit-transform: translate3d(0,0,0);
+    content: '';
+    width: 169px;
+    height: 351px;
+    position: absolute;
+    right: 0;
+    bottom: -55%;
+}
 .team-carousel{
 	height: 320px;
 	overflow: hidden;
@@ -712,11 +729,11 @@ input, textarea{
     filter: blur(115px);
 	-webkit-transform: translate3d(0,0,0);
     transform: rotate(-75deg);
-    width: 358px;
-    height: 528px;
+    width: 185px;
+    height: 104px;
     z-index: -1;
     right: 0;
-    bottom: 0;
+    bottom: 5%;
 }
 .contact-form label{
 	font-size: 12;
@@ -882,4 +899,12 @@ footer .logotype span{
 	display: flex;
     align-items: center;
     justify-content: center;
+}
+.roadmap-bg {
+    background: url(../images/road-desk.png);
+    height: 69vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
