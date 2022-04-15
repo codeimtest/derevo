@@ -96,7 +96,7 @@ if(document.querySelector(".starIcon1") != undefined){
       }
   }
 
-  function createRatingEventListeners(){
+  var createRatingEventListeners = function (){
       // iterate over the stars and add event listeners
       for(let i = 0; i < stars.length; i++){
           // set the number of star value
