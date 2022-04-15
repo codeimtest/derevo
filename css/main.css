@@ -22,6 +22,7 @@
 
 @font-face { src: url("../fonts/Inter-Regular.woff2") format("woff2"); font-family: "inter-st"; font-weight: 400; font-style: normal; }
 @font-face { src: url("../fonts/Inter-Italic.woff2") format("woff2"); font-family: "inter-st"; font-weight: 400; font-style: italic; }
+@font-face { src: url("../fonts/Inter-Medium.woff2") format("woff2"); font-family: "inter-st"; font-weight: 500; font-style: normal; }
 @font-face { src: url("../fonts/Inter-Bold.woff2") format("woff2"); font-family: "inter-st"; font-weight: 700; font-style: normal; }
 @font-face { src: url("../fonts/Inter-BoldItalic.woff2") format("woff2"); font-family: "inter-st"; font-weight: 700; font-style: italic; }
 
@@ -378,6 +379,7 @@ main#main-content{
 	border-radius: 16px;
 	padding: 40px;
 	width: 40%;
+	height: 380px;
 }
 .modules-carousel .swiper-slide .moudule-icon{
 	background: rgba(105, 112, 119, 0.08);
@@ -567,6 +569,19 @@ section.team:after {
     margin: 40px 0;
 }
 /*faq*/
+.faq::before{
+	background: #0F62FE;
+    filter: blur(199px);
+    transform: rotate(-75deg);
+    -webkit-transform: translate3d(0,0,0);
+    content: '';
+    width: 321px;
+    height: 351px;
+    position: absolute;
+    left: -8%;
+    bottom: -17%;
+    z-index: -1;
+}
 .faq-accordion  > .faq-accordion-item > .toggle-accordion  + * {
 	display: none;
 }
@@ -701,6 +716,9 @@ input, textarea{
 .rating-form{
 	margin-bottom: 34px;
 }
+.contact-form .rating-form .form-group label{
+	font-size: 28px;
+}
 .starPicker{
 	cursor: pointer;
     transition: .3s;
@@ -736,7 +754,8 @@ input, textarea{
     bottom: 5%;
 }
 .contact-form label{
-	font-size: 12;
+	font-size: 12px;
+	font-weight: 500;
 	color: var(--main-text);
 }
  .fa-star {

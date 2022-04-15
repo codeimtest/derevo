@@ -120,3 +120,11 @@ if(document.querySelector(".starIcon1") != undefined){
   // create the events listeners
   createRatingEventListeners();
 }
+//copyright year
+document.getElementById('copyright-year').appendChild(document.createTextNode(new Date().getFullYear()))
+//show more news
+$('.show-more-content').hide();
+$(".show-more").on("click", function(e) {
+    $(this).parent().parent().prev('.show-more-content').delay(100).fadeIn();
+    e.preventDefault();
+})

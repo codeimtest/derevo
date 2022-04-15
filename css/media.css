@@ -16,6 +16,7 @@
 
 /* md <= Large (lg) */
 @media (max-width : 992px) {
+
 	section.team:after{
 		right: auto;
 		left: 0;
@@ -88,10 +89,7 @@
 	.team-carousel .swiper-wrapper{
 		margin-bottom: 36px;
 	}
-	.button-middle{
-		width: 100%;
-		display: block;
-	}
+	
 	footer:before {
 		content: '';
 		position: absolute;
@@ -164,10 +162,36 @@
 	.analysis::after{
 		right: auto;
 	}
+	.modules-carousel .swiper-slide{
+		height: auto;
+	}
+	.faq::before{
+		width: 263px;
+    	height: 186px;
+    	position: absolute;
+    	left: -8%;
+    	bottom: -16%;
+    	z-index: -1;
+		display: block;
+	}
 }
 
 /* sm <= Medium (md) */
 @media (max-width : 768px) {
+	.rating-form{
+		margin-bottom: 22px;
+	}
+	.form-group.submit-items{margin-top: 24px;}
+	.button-middle{
+		width: 100%;
+		display: block;
+	}
+	textarea{
+		height: 96px;
+	}
+	input{
+		margin-bottom: 16px;
+	}
 	footer:before{
 		height: 64px;
 	}
@@ -268,7 +292,8 @@
 		margin-top: 24px;
 	}
 	.contact-form{
-		padding: 24px 16px;
+		padding: 16px 16px 24px 16px;
+		line-height: 20px;
 	}
 	.contact-form{
 		margin-top: 26px;
@@ -298,6 +323,7 @@
 		max-height: 330px;
 		object-position: top;
 	}
+	
 }
 
 /* xs <= Small (sm) */
