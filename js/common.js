@@ -62,12 +62,13 @@ if(document.querySelector(".starIcon1") != undefined){
   let stars = [];
 
   // init the stars query selectors
-  function starQueryInit(){
-      // create the querySelector of each 5 stars and push it to the stars list
-      for(let i=1; i <= 5; i++){
-          stars.push(document.querySelector(".starIcon"+i));
-      }
-  }
+    var starQueryInit = function (){
+        // create the querySelector of each 5 stars and push it to the stars list
+        for(let i=1; i <= 5; i++){
+            stars.push(document.querySelector(".starIcon"+i));
+        }
+    }
+  
 
   // remove the clickedStar class on every stars
   function removeClickedStar(){
