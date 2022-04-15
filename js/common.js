@@ -12,14 +12,21 @@ const swipermodules = new Swiper('.modules-carousel', {
       nextEl: '.modules-next',
       prevEl: '.modules-prev',
     },
-    slidesPerView: 'auto',
+    slidesPerView: 1,
     centeredSlides: false,
-    spaceBetween: 40,
+    spaceBetween: 16,
+    breakpoints: {
+        1280: {
+          slidesPerView: 'auto',
+          spaceBetween: 40,
+          centeredSlides: false,
+        },
+      },
   });
   //team slider
 const swiperteam = new Swiper('.team-carousel', {
   // Optional parameters
-  direction: 'vertical',
+  direction: 'horizontal',
   loop: false,
   // Navigation arrows
   slidesPerView: 1,
@@ -28,6 +35,11 @@ const swiperteam = new Swiper('.team-carousel', {
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
+  },
+  breakpoints: {
+    1280: {
+        direction: 'vertical',
+    },
   },
 });
 //faq accordeon
@@ -100,3 +112,8 @@ if(document.querySelector(".starIcon1") != undefined){
   // create the events listeners
   createRatingEventListeners();
 }
+//preloader
+$(window).on('load', function() { // makes sure the whole site is loaded 
+    $('#status-img').fadeOut(); // will first fade out the loading animation 
+    $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+})
