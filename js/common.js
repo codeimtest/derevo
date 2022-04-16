@@ -17,13 +17,13 @@ const swipermodules = new Swiper('.modules-carousel', {
       nextEl: '.modules-next',
       prevEl: '.modules-prev',
     },
-    slidesPerView: 1,
+    slidesPerView: 1.1,
     centeredSlides: false,
     spaceBetween: 16,
-    
+    watchOverflow: true,
     breakpoints: {
         1280: {
-          slidesPerView: 'auto',
+          slidesPerView: 2.2,
           watchOverflow: true,
           spaceBetween: 40,
           centeredSlides: false,
