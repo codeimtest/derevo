@@ -925,13 +925,43 @@ footer .logotype span{
     justify-content: center;
 }
 /*roadmap*/
-.roadmap-bg {
-    background: url(../images/road-desk.png);
-    height: 69vh;
-    width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+.roadmap-three-mobile {
+    display: none;
+    justify-content: space-between;
+    flex-flow: column;
+    height: 308px;
+    max-height: 400px;
+}
+.roadmap-three-mobile .roadmap-item{
+	background: #E7E8E8;
+	width: 4px;
+	height: 100%;
+	position: relative;
+}
+.roadmap-three-mobile .roadmap-item.active:first-child{
+	background: #E7E8E8;
+}
+.roadmap-three-mobile .roadmap-item.active:after{
+	background: var(--alt);
+}
+.roadmap-three-mobile .roadmap-item:after {
+    content: '';
+    width: 16px;
+    height: 16px;
+    background: #E7E8E8;
+    position: absolute;
+	background: var(--alt);
+	border-radius: 100%;
+	bottom: 50%;
+}
+.roadmap-three-mobile .roadmap-item:first-child::after{
+	top: 0;
+}
+.roadmap-three-mobile .roadmap-item:last-child::after{
+	bottom: 0;
+}
+.roadmap-three-mobile .roadmap-item.active{
+	background: var(--alt);
 }
 .roadmap-three{
 	display: flex;
