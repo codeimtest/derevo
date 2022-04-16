@@ -197,6 +197,14 @@
 	}
 	.roadmap-three .roadmap-item .roadmap-content p{
 		margin-bottom: 0;
+		color: var(--main-text);
+		margin-top: 4px;
+	}
+	.roadmap-content time{
+		font-weight: 500;
+	}
+	.roadmap-three .roadmap-item .roadmap-content p{
+		margin-bottom: 0;
 	}
 	.roadmap-three .roadmap-item{
 		width: 100%;
