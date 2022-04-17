@@ -16,7 +16,18 @@
 
 /* md <= Large (lg) */
 @media (max-width : 992px) {
-
+	.hide-on-desk{
+		display: block;
+	}
+	header{
+		padding: 9px 24px;
+	}
+	.additional-styles-carousel .swiper-pagination{
+		position: relative;
+		display: flex;
+		justify-content: center;
+		flex-flow: row;
+	}
 	section.team:after{
 		right: auto;
 		left: 0;

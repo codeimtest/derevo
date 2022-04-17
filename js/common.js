@@ -1,12 +1,18 @@
 //preloader
 $(window).on('load', function() { // makes sure the whole site is loaded 
+    $('body').css('overflow','visible');
     $('#status-img').fadeOut(); // will first fade out the loading animation 
     $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
 })
 //mobile menu
-$('.menu-btn').click(function(){
+$(window).click(function() {
+    $("header ul").removeClass('active')
+   });
+$('.menu-btn').click(function(e){
     $('header ul').toggleClass('active')
+    e.stopPropagation();
 })
+
 //modules slider
 const swipermodules = new Swiper('.modules-carousel', {
     // Optional parameters
@@ -30,8 +36,9 @@ const swipermodules = new Swiper('.modules-carousel', {
         },
       },
   });
+  
   //team slider
-const swiperteam = new Swiper('.team-carousel', {
+const swiperteam = new Swiper('#team-carousel', {
   // Optional parameters
   direction: 'horizontal',
   loop: false,
@@ -41,14 +48,19 @@ const swiperteam = new Swiper('.team-carousel', {
   spaceBetween: 30,
   pagination: {
     el: '.swiper-pagination',
-    clickable: true,
+    clickable: false,
   },
+  switch: true,
   breakpoints: {
-    1280: {
+    998: {
         direction: 'vertical',
+        clickable: true,
     },
+    switch: true,
   },
 });
+
+
 //faq accordeon
 var toggleActiveElements = document.querySelectorAll(".toggle-accordion");
 for (var i = 0; i < toggleActiveElements.length; i++) {
