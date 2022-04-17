@@ -12,7 +12,10 @@ $('.menu-btn').click(function(e){
     $('header ul').toggleClass('active')
     e.stopPropagation();
 })
-
+//add class to menu when scroll
+$(window).scroll(function () {
+    $('header').toggleClass("sticky-menu", ($(window).scrollTop() > 400));
+  });
 //modules slider
 const swipermodules = new Swiper('.modules-carousel', {
     // Optional parameters

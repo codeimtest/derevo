@@ -124,12 +124,17 @@ header{
 	display: flex;
 	justify-content: space-between;
 	padding: 24px;
-	position: fixed;
+	position: absolute;
 	width: 100%;
 	align-items: center;
     top: 0;
 	z-index: 17;
+	transition: 0.2s ease;
+}
+header.sticky-menu{
+	position: fixed;
 	background: #fff;
+	transition: 0.2s ease;
 }
 header ul{
 	position: absolute;
