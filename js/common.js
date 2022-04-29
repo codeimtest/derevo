@@ -16,6 +16,7 @@ $('.menu-btn').click(function(e){
 $(window).scroll(function () {
     $('header').toggleClass("sticky-menu", ($(window).scrollTop() > 400));
   });
+
 //modules slider
 const swipermodules = new Swiper('.modules-carousel', {
     // Optional parameters
@@ -37,32 +38,49 @@ const swipermodules = new Swiper('.modules-carousel', {
           spaceBetween: 40,
           centeredSlides: false,
         },
-      },
+      }, 
   });
-  
   //team slider
-const swiperteam = new Swiper('#team-carousel', {
-  // Optional parameters
-  direction: 'horizontal',
-  loop: false,
-  // Navigation arrows
-  slidesPerView: 1,
-  centeredSlides: false,
-  spaceBetween: 30,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: false,
-  },
-  switch: true,
-  breakpoints: {
-    998: {
-        direction: 'vertical',
-        clickable: true,
+  const swiperteam = new Swiper('#team-carousel', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: false,
+     // Navigation arrows
+     navigation: {
+        nextEl: '.team-next',
+        prevEl: '.team-prev',
+      },
+    slidesPerView: 1,
+    centeredSlides: false,
+    spaceBetween: 30,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: false,
     },
     switch: true,
-  },
-});
-
+    breakpoints: {
+      998: {
+          direction: 'vertical',
+          clickable: true,
+      },
+      switch: true,
+    },
+  });
+//video slider
+const swipervideo = new Swiper('#video-carousel', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    // Navigation arrows
+    slidesPerView: 'auto',
+    centeredSlides: true,
+    spaceBetween: 10,
+    switch: true,
+    navigation: {
+        nextEl: '.video-next',
+        prevEl: '.video-prev',
+      },
+  });
 
 //faq accordeon
 var toggleActiveElements = document.querySelectorAll(".toggle-accordion");
@@ -143,3 +161,19 @@ $(".show-more").on("click", function(e) {
     $(this).parent().parent().prev('.show-more-content').delay(100).fadeIn();
     e.preventDefault();
 })
+//video gallery
+$('.video-gallery').magnificPopup({
+    delegate: 'a',
+    type: 'iframe',
+    closeOnContentClick: false,
+    closeBtnInside: false,
+    mainClass: 'mfp-with-zoom mfp-img-mobile',
+    image: {
+        verticalFit: true,
+    },
+    gallery: {
+        enabled: true,
+        tCounter: '<span class="mfp-counter">%curr% из %total%</span>',
+    },
+
+});  

@@ -276,6 +276,9 @@
 
 /* sm <= Medium (md) */
 @media (max-width : 768px) {
+	.modules-btn.video-next, .modules-btn.video-prev{
+		top: 40%;
+	}
 	.rating-form{
 		margin-bottom: 22px;
 	}

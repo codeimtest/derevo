@@ -285,6 +285,7 @@ section.first-screen{
 }
 .title-wrap h1{
 	margin-bottom: 40px;
+	color: #24a148;
 }
 .title-wrap p{
 	color: #697077;
@@ -294,8 +295,33 @@ section.first-screen{
 
 
 /*promo video*/
+#video-carousel{
+	overflow: hidden;
+}
+.video-nav{
+	position: absolute;
+	width: 100%;
+}
+
+.modules-btn.video-next,.modules-btn.video-prev{
+	top: 50%;
+	position: absolute;
+	border-color: #dbdbdb;
+	z-index: 3;
+}
+.video-prev{
+	left: 3%;
+}
+.video-next{
+	right: 3%;
+	margin-left: 0;
+}
+.modules-btn.video-next i,.modules-btn.video-prev i{
+	color: #fff;
+}
+
 .video-wrap{
-	background: url('../images/tree.jpg');
+	
 	background-size: cover;
 	background-position: center center;
 	width: 100%;
