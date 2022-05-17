@@ -702,12 +702,17 @@ section.team:after {
 	font-size: 16px;
 	line-height: 24px;
 }
-
+.page-content .news-date{
+	color: var(--sec-text);
+	display: flex;
+    justify-content: flex-end;
+	margin-top: 2rem;
+}
 .news-item .news-date,.roadmap-content time{
 	color: var(--sec-text);
 	font-size: 12px;
 }
-.news-item .news-date time{
+.news-item .news-date time,.page-content .news-date time{
 	position: relative;
 	margin-right: 14px;
 }
@@ -1125,4 +1130,19 @@ header .active.lang ul{
 }
 header .lang:hover{
 	cursor: pointer;
+}
+.news-feed{
+	padding: 220px 0 80px 0;
+}
+.empty-page{
+	padding: 220px 0;
+}
+.news-feed h1{
+	margin-bottom: 40px;
+}
+.news-feed .news-thumbnail img{
+	max-height: 400px;
+}
+hr{
+	margin: 2rem 0;
 }

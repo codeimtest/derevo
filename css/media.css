@@ -275,11 +275,14 @@
 	.roadmap-wrap{
 		margin-top: 32px;
 	}
-	.footer-widget-image{
+	.footer-widget-image a{
 		justify-content: flex-start;
 	}
 	.footer-widget-image img{
 		width: 50%;
+	}
+	.page-title{
+		font-size: 32px;
 	}
 }
 
@@ -434,7 +437,8 @@
 		padding: 16px;
 	}
 	.parthners-logos img{
-		width: 45%;
+		width: 100%;
+		height: 60px;
 	}
 	.lg-section{
 		padding: 60px 0;
@@ -445,7 +449,9 @@
 		max-height: 330px;
 		object-position: top;
 	}
-	
+	.page-title{
+		font-size: 26px;
+	}
 }
 
 /* xs <= Small (sm) */
