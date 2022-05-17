@@ -191,12 +191,13 @@
             </section>
             <footer>
                 <div class="container">
+                    <div itemscope itemtype="http://schema.org/Organization"></div>
                     <div class="row">
                         <div class="col-md-4">
                             <div class="footer-widget">
                                 <a href="#" class="logotype">
                                     <img src="images/logo.svg" alt="">
-                                    <span>Живое древо</span>
+                                    <span itemprop="name">Живое древо</span>
                                 </a>
                                 <p>Мы открыты для новых партнеров будущих пользователей и сотрудников. Если у вас остались
                                     вопросы, сввяжитесь с нами удобным вам способом</p>
@@ -208,28 +209,15 @@
                                     Контакты
                                 </div>
                                 <nav class="widget-menu">
-                                    <ul>
-                                        <li><a href="mailto:info@arhivdoverie.ru"><i class="fa fa-envelope"></i>info@arhivdoverie.ru</a></li>
-                                        <li><i class="fa-solid fa-location-dot"></i>420061, Казань, ул. Ершова, 1А, офис 866</li>
+                                    <ul itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                                        <li><a href="mailto:info@arhivdoverie.ru"><i class="fa fa-envelope"></i><span itemprop="email">info@arhivdoverie.ru</span></a></li>
+                                        <li><i class="fa-solid fa-location-dot"></i><span itemprop="postalCode">420061</span>, <span itemprop="addressLocality">Казань</span>, <span itemprop="streetAddress">ул. Ершова, 1А, офис 866</span></li>
                                     </ul>
                                 </nav>
                             </div>
                         </div>
                         <div class="offset-md-1 col-md-3">
                             <div class="footer-widget">
-                                <!-- 
-                                    <div class="widget-title">
-                                    Социальные сети
-                                </div>
-                                <nav class="social-menu">
-                                    <ul>
-                                        <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                                        <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
-                                    </ul>
-                                </nav>
-                                 -->
                                  <div class="footer-widget-image">
                                      <a href="https://arhivdoverie.ru" target="_blank">
                                         <img src="images/logo-text.png" alt="">
@@ -237,6 +225,7 @@
                                  </div>
                             </div>
                         </div>
+                    </div>
                     </div>
                 </div>
             </footer>
