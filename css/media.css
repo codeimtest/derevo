@@ -30,6 +30,8 @@
 		display: flex;
 		justify-content: center;
 		flex-flow: row;
+		position: relative;
+		display: none;
 	}
 	section.team:after{
 		right: auto;
@@ -450,7 +452,7 @@
 		object-position: top;
 	}
 	.page-title{
-		font-size: 26px;
+		font-size: 28px;
 	}
 }
 
