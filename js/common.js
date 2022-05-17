@@ -5,18 +5,19 @@ $(window).on('load', function() { // makes sure the whole site is loaded
     $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
 })
 //mobile menu
-$(window).click(function() {
-    $("header ul").removeClass('active')
-   });
-$('.menu-btn').click(function(e){
-    $('header ul').toggleClass('active')
-    e.stopPropagation();
-})
+$('.menu-btn').click(function(){
+    $('.primary-menu').toggleClass('active');
+});
+$(document).mouseup(function (e) {
+    var container = $(".primary-menu,.menu-btn");
+    if (container.has(e.target).length === 0){
+        $('.primary-menu').removeClass('active');
+    }
+});
 //add class to menu when scroll
 $(window).scroll(function () {
     $('header').toggleClass("sticky-menu", ($(window).scrollTop() > 400));
-  });
-
+});
 //modules slider
 const swipermodules = new Swiper('.modules-carousel', {
     // Optional parameters
@@ -177,3 +178,7 @@ $('.video-gallery').magnificPopup({
     },
 
 });  
+//chpoice language
+$('.lang').click(function(e){
+    $(this).toggleClass('active');
+})

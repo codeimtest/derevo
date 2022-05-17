@@ -285,7 +285,7 @@ section.first-screen{
 }
 .title-wrap h1{
 	margin-bottom: 40px;
-	color: #24a148;
+	color: #006400;
 }
 .title-wrap p{
 	color: #697077;
@@ -852,6 +852,21 @@ footer .logotype span{
 	margin-bottom: 12px;
 	margin-top: 16px;
 }
+.footer-widget-image a{
+	display: flex;
+	justify-content: flex-end;
+}
+.footer-widget-image img{
+	width: 70%;
+	margin-top: 16px;
+	display: flex;
+    filter: grayscale(1);
+	transition: 0.2s ease;
+}
+.footer-widget-image img:hover{
+	opacity: 0.8;
+	transition: 0.2s ease;
+}
 .footer-widget ul{
 	list-style: none;
 	padding-left: 0;
@@ -1081,4 +1096,48 @@ body{
 }
 .roadmap-wrap {
 	padding: 220px 0;
-	}
+}
+.lang{
+	position: relative;
+	transition: 0.2s ease;
+	color: var(--main-text);
+}
+header .lang ul{
+	display: flex;
+	right: 0;
+	opacity: 0;
+	visibility: hidden;
+	right: -129%;
+    top: -65%;
+}
+header .lang ul li{
+	margin: 0 10px;
+}
+header .lang ul li:first-child{
+	margin-left: 0;
+}
+header .lang ul li:last-child{
+	margin-right: 0;
+}
+header .active.lang ul{
+	opacity: 1;
+	visibility: visible;
+}
+header .lang:hover{
+	cursor: pointer;
+}
+header .active.lang::after{
+	transform: rotate(180deg);
+}
+header .lang::after{
+	font-family: "Font Awesome 5 Free";
+    content: "\f107";
+    font-weight: 900;
+    color: var(--sec-text);
+    transition: 0.1s ease;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	top: 0;
+}	

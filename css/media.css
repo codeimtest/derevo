@@ -22,8 +22,11 @@
 	header{
 		padding: 9px 24px;
 	}
+	.video-wrap h2{
+		font-size: 34px;
+	}
 	.additional-styles-carousel .swiper-pagination{
-		position: relative;
+		margin-top: 30px;
 		display: flex;
 		justify-content: center;
 		flex-flow: row;
@@ -272,12 +275,30 @@
 	.roadmap-wrap{
 		margin-top: 32px;
 	}
+	.footer-widget-image{
+		justify-content: flex-start;
+	}
+	.footer-widget-image img{
+		width: 50%;
+	}
 }
 
 /* sm <= Medium (md) */
 @media (max-width : 768px) {
+	header .lang ul{
+		top: 176%;
+		margin-right: 0;
+		width: auto;
+		right: auto;
+	}
+	#team .modules-nav{
+		display: flex;
+	}
 	.modules-btn.video-next, .modules-btn.video-prev{
 		top: 40%;
+	}
+	.parthners-logos{
+		flex-flow: wrap;
 	}
 	.rating-form{
 		margin-bottom: 22px;
@@ -413,7 +434,7 @@
 		padding: 16px;
 	}
 	.parthners-logos img{
-		width: 20%;
+		width: 45%;
 	}
 	.lg-section{
 		padding: 60px 0;
