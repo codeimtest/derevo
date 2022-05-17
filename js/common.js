@@ -178,7 +178,3 @@ $('.video-gallery').magnificPopup({
     },
 
 });  
-//chpoice language
-$('.lang').click(function(e){
-    $(this).toggleClass('active');
-})

@@ -1105,10 +1105,10 @@ body{
 header .lang ul{
 	display: flex;
 	right: 0;
-	opacity: 0;
-	visibility: hidden;
-	right: -129%;
-    top: -65%;
+	opacity: 1;
+	visibility: visible;
+	top: 0;
+	position: relative;
 }
 header .lang ul li{
 	margin: 0 10px;
@@ -1126,18 +1126,3 @@ header .active.lang ul{
 header .lang:hover{
 	cursor: pointer;
 }
-header .active.lang::after{
-	transform: rotate(180deg);
-}
-header .lang::after{
-	font-family: "Font Awesome 5 Free";
-    content: "\f107";
-    font-weight: 900;
-    color: var(--sec-text);
-    transition: 0.1s ease;
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	margin: auto;
-	top: 0;
-}	
